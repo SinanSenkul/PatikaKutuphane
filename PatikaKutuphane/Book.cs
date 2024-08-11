@@ -11,7 +11,7 @@ public class Book
     public DateTime PubDate { get; set; }
 
     // Constructors
-    public Book()
+    public Book() //no params, auto-creates a book object
     {
         Name = "Adı Aylin";
         WriterName = "Ayşe";
@@ -20,7 +20,7 @@ public class Book
         Publisher = "Remzi Kitabevi";
         PubDate = DateTime.Now;
     }
-
+    //below one uses params to create a new book object:
     public Book(string name, string writerName, string writerLastName, int pageNum, string publisher)
     {
         Name = name;
