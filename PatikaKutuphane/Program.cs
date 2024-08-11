@@ -1,31 +1,15 @@
-﻿public class Book
+﻿using System;
+
+namespace PatikaKutuphane
 {
-    // Field
-    public string Name { get; set; }
-    public string WriterName { get; set; }
-    public string WriterLastName { get; set; }
-    public int PageNum { get; set; }
-    public string Publisher { get; set; }
-    public DateTime PubDate { get; set; }
-
-    // Constructors
-    public Book()
+    class Program
     {
-        Name = "Adı Aylin";
-        WriterName = "Ayşe";
-        WriterLastName = "Kulin";
-        PageNum = 398;
-        Publisher = "Remzi Kitabevi";
-        PubDate = DateTime.Now;
-    }
-
-    public Book(string name, string writerName, string writerLastName, int pageNum, string publisher)
-    {
-        Name = name;
-        WriterName = writerName;
-        WriterLastName = writerLastName;
-        PageNum = pageNum;
-        Publisher = publisher;
-        PubDate = DateTime.Now;
+        static void Main(string[] args)
+        {
+            Book book1 = new Book();
+            Book book2 = new Book("Bir Kitap", "Ahmet", "Yılmaz", 320, "Alfa Yayınları");
+            Console.WriteLine($"birinci kitap adı: {book1.Name} kayıt tarihi: {book1.PubDate}");
+            Console.WriteLine($"ikinci kitap adı: {book2.Name} kayıt tarihi: {book2.PubDate}");
+        }
     }
 }
